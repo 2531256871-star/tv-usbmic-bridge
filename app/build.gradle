@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.minis.usbmictest'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.minis.usbmictest"
+        minSdk 21
+        targetSdk 28
+        versionCode 1
+        versionName "0.1"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
