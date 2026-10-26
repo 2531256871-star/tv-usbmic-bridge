@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
 
     private static final int SR = 48000;
     private static final int CH = AudioFormat.CHANNEL_IN_MONO;
-    private static final int FMT = AudioFormat.ENCODING_PCM_16_BIT;
+    private static final int FMT = android.media.AudioFormat.ENCODING_PCM_16_BIT;
 
     private void log(final String s) {
         android.util.Log.e("USBMIC", s);
@@ -192,7 +192,7 @@ public class MainActivity extends Activity {
                     if (rms > peakRms) peakRms = rms;
                     final int bars = (int) Math.min(40, rms * 300);
                     final StringBuilder sb = new StringBuilder();
-                    for (int i = 0; i < bars; i++) sb.append('█');
+                    for (int i = 0; i < bars; i++) sb.append('#');
                     final String meter = String.format(Locale.US, "%s\nRMS %.4f  PEAK %.4f  %d帧",
                             sb.toString(), rms, peakRms, totalFrames);
                     runOnUiThread(() -> meterView.setText(meter));
