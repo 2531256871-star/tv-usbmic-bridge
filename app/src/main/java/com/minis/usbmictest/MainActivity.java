@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
 
     private static final int SR = 48000;
     private static final int CH = AudioFormat.CHANNEL_IN_MONO;
-    private static final int FMT = android.media.AudioFormat.ENCODING_PCM_16_BIT;
+    private static final int FMT = 2; // ENCODING_PCM_16_BIT
 
     private void log(final String s) {
         android.util.Log.e("USBMIC", s);
